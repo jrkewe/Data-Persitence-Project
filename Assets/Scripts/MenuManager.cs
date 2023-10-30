@@ -4,9 +4,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-#if UNITY_EDITOR
-using UnityEditor;
-# endif  
+//#if UNITY_EDITOR
+//using UnityEditor;
+//# endif  
 
 public class MenuManager : MonoBehaviour
 {
@@ -39,8 +39,8 @@ public class MenuManager : MonoBehaviour
 
     public void TitleTextChange() 
     {
-        titleText.text = "Best score: " + nameID+ " - " +bestScore;
-        DataPersistanceManager.Instance.nameID = nameID;
+        titleText.text = "Best score : " + nameID+ " : " +bestScore;
+        DataPersistanceManager.Instance.NameID = nameID;
     }
 
     public void StartGame() 
@@ -53,11 +53,9 @@ public class MenuManager : MonoBehaviour
 
     public void ExitGame() 
     {
-#if UNITY_EDITOR
-        EditorApplication.ExitPlaymode();
-#else
-    Application.Quite();
-#endif
-
+//#if UNITY_EDITOR
+//        EditorApplication.ExitPlaymode();
+//#else
+    Application.Quit();
     }
 }

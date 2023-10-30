@@ -7,7 +7,7 @@ public class DataPersistanceManager : MonoBehaviour
 {
     public static DataPersistanceManager Instance;
 
-    public string nameID;
+    public string NameID;
     public int BestScore;
 
     private void Awake()

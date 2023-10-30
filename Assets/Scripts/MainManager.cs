@@ -25,7 +25,7 @@ public class MainManager : MonoBehaviour
     {
         if (DataPersistanceManager.Instance != null)
         {
-            BestScoreText.text = "Best Score : " +DataPersistanceManager.Instance.nameID+ " : " +DataPersistanceManager.Instance.BestScore;
+            BestScoreText.text = "Best Score : " +DataPersistanceManager.Instance.NameID+ " : " +DataPersistanceManager.Instance.BestScore;
         }
         const float step = 0.6f;
         int perLine = Mathf.FloorToInt(4.0f / step);
